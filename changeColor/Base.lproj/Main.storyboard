@@ -1,24 +1,184 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21208.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21191"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="changeColor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="23f70b4955359e3be52168203ccd3dae拷貝" translatesAutoresizingMaskIntoConstraints="NO" id="Dco-jo-KBF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="586"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RoR-Hi-Z4P">
+                                <rect key="frame" x="0.0" y="585" width="414" height="311"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FYb-xt-WGK">
+                                        <rect key="frame" x="15" y="110" width="177" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="minimumTrackTintColor" systemColor="systemBlueColor"/>
+                                        <color key="thumbTintColor" systemColor="systemBlueColor"/>
+                                        <connections>
+                                            <action selector="changeColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="lR7-73-PZL"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pff-mp-1Ij">
+                                        <rect key="frame" x="15" y="10" width="177" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="minimumTrackTintColor" systemColor="systemRedColor"/>
+                                        <color key="thumbTintColor" systemColor="systemRedColor"/>
+                                        <connections>
+                                            <action selector="changeColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="m8I-Mj-jXH"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7Zm-AJ-TL6">
+                                        <rect key="frame" x="15" y="60" width="177" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
+                                        <color key="thumbTintColor" systemColor="systemGreenColor"/>
+                                        <connections>
+                                            <action selector="changeColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="RWF-eb-xp2"/>
+                                        </connections>
+                                    </slider>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXq-p5-I9q">
+                                        <rect key="frame" x="115" y="160" width="70" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="隨機">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="randomBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UER-rz-pmz"/>
+                                        </connections>
+                                    </button>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ugh-H6-0Qk">
+                                        <rect key="frame" x="222" y="10" width="177" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="minimumTrackTintColor" systemColor="systemRedColor"/>
+                                        <color key="thumbTintColor" systemColor="systemRedColor"/>
+                                        <connections>
+                                            <action selector="changeGradientColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="3DO-ba-d65"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IHV-Gr-o0a">
+                                        <rect key="frame" x="222" y="60" width="177" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
+                                        <color key="thumbTintColor" systemColor="systemGreenColor"/>
+                                        <connections>
+                                            <action selector="changeGradientColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="d14-Jf-T18"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="BSI-18-mHO">
+                                        <rect key="frame" x="222" y="110" width="177" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="minimumTrackTintColor" systemColor="tintColor"/>
+                                        <color key="thumbTintColor" systemColor="tintColor"/>
+                                        <connections>
+                                            <action selector="changeGradientColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="VG3-C9-Xdr"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="漸層：" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBD-ua-en1">
+                                        <rect key="frame" x="222" y="160" width="70" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" systemColor="tintColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Un-85-Mhj">
+                                        <rect key="frame" x="15" y="160" width="70" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="預設">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="presetBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t4x-x6-ly4"/>
+                                        </connections>
+                                    </button>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g6P-11-N1l">
+                                        <rect key="frame" x="336" y="165" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="gradientSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="D1X-TX-MNf"/>
+                                        </connections>
+                                    </switch>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUg-dB-SaW">
+                                        <rect key="frame" x="212" y="220" width="80" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="隨機1">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="gradientRandom1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qn1-1o-9Xs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPg-0g-lM3">
+                                        <rect key="frame" x="300" y="220" width="85" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="隨機2">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="gradientRandom2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2VN-m3-8B5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="blueSlider" destination="FYb-xt-WGK" id="Bht-jd-NEe"/>
+                        <outlet property="gradientBlueSlider" destination="BSI-18-mHO" id="Geg-od-28l"/>
+                        <outlet property="gradientColorRandom" destination="MUg-dB-SaW" id="R5h-mx-eys"/>
+                        <outlet property="gradientColorRandom2" destination="pPg-0g-lM3" id="yuj-bL-9TM"/>
+                        <outlet property="gradientGreenSlider" destination="IHV-Gr-o0a" id="cTn-Kf-lcO"/>
+                        <outlet property="gradientRedSlider" destination="ugh-H6-0Qk" id="Ycr-OF-sVc"/>
+                        <outlet property="greenSlider" destination="7Zm-AJ-TL6" id="6nG-oH-Y4H"/>
+                        <outlet property="imageView" destination="Dco-jo-KBF" id="uVg-a5-2aP"/>
+                        <outlet property="presetBtn" destination="4Un-85-Mhj" id="Vag-H3-Shn"/>
+                        <outlet property="redSlider" destination="pff-mp-1Ij" id="9eV-Ua-h77"/>
+                        <outlet property="singleColorRandom" destination="QXq-p5-I9q" id="EeQ-99-cHI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="30.434782608695656" y="-28.794642857142854"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="23f70b4955359e3be52168203ccd3dae拷貝" width="414" height="586"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
